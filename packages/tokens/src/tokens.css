@@ -1,0 +1,75 @@
+/**
+ * modern-form design tokens.
+ *
+ * These CSS custom properties are the single source of truth for every visual decision the
+ * renderer makes - components never hardcode a color, spacing or radius value, they only
+ * reference these variables. Override any of them in your own stylesheet to retheme the whole
+ * form, with zero build tooling and no need to touch Tailwind. See SPECIFICATION.md section 9.
+ */
+
+:root {
+  /* -- Primitive color scale (rarely overridden directly) -------------------------------- */
+  --mf-color-gray-50: #f9fafb;
+  --mf-color-gray-100: #f3f4f6;
+  --mf-color-gray-200: #e5e7eb;
+  --mf-color-gray-300: #d1d5db;
+  --mf-color-gray-400: #9ca3af;
+  --mf-color-gray-500: #6b7280;
+  --mf-color-gray-600: #4b5563;
+  --mf-color-gray-700: #374151;
+  --mf-color-gray-800: #1f2937;
+  --mf-color-gray-900: #111827;
+
+  --mf-color-blue-500: #3b82f6;
+  --mf-color-blue-600: #2563eb;
+  --mf-color-blue-700: #1d4ed8;
+
+  --mf-color-red-500: #ef4444;
+  --mf-color-red-600: #dc2626;
+
+  /* -- Semantic color tokens (the ones consumers typically override) ---------------------- */
+  --mf-color-primary: var(--mf-color-blue-600);
+  --mf-color-primary-hover: var(--mf-color-blue-700);
+  --mf-color-border: var(--mf-color-gray-300);
+  --mf-color-border-focus: var(--mf-color-blue-500);
+  --mf-color-error: var(--mf-color-red-600);
+  --mf-color-text: var(--mf-color-gray-900);
+  --mf-color-text-muted: var(--mf-color-gray-500);
+  --mf-color-bg: #ffffff;
+  --mf-color-bg-disabled: var(--mf-color-gray-100);
+
+  /* -- Radius ------------------------------------------------------------------------------ */
+  --mf-radius-sm: 0.25rem;
+  --mf-radius-md: 0.375rem;
+  --mf-radius-lg: 0.5rem;
+  --mf-radius-full: 9999px;
+
+  /* -- Spacing (4px base scale) ------------------------------------------------------------- */
+  --mf-space-1: 0.25rem;
+  --mf-space-2: 0.5rem;
+  --mf-space-3: 0.75rem;
+  --mf-space-4: 1rem;
+  --mf-space-5: 1.25rem;
+  --mf-space-6: 1.5rem;
+  --mf-space-8: 2rem;
+
+  /* -- Typography --------------------------------------------------------------------------- */
+  --mf-font-family:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mf-font-size-sm: 0.875rem;
+  --mf-font-size-md: 1rem;
+  --mf-font-size-lg: 1.125rem;
+  --mf-font-weight-normal: 400;
+  --mf-font-weight-medium: 500;
+  --mf-font-weight-bold: 700;
+  --mf-line-height: 1.5;
+
+  /* -- Border / focus ------------------------------------------------------------------------ */
+  --mf-border-width: 1px;
+  --mf-focus-ring-width: 2px;
+  --mf-focus-ring-color: color-mix(in srgb, var(--mf-color-border-focus) 50%, transparent);
+
+  /* -- Motion --------------------------------------------------------------------------------- */
+  --mf-transition-duration: 150ms;
+  --mf-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}

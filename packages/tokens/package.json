@@ -1,0 +1,18 @@
+{
+  "name": "@modern-form/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens (CSS custom properties) shared by modern-form packages. Override these variables in your own CSS to retheme the whole renderer.",
+  "license": "MIT",
+  "type": "module",
+  "files": ["src"],
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "echo \"@modern-form/tokens has no build step (pure CSS)\"",
+    "lint": "echo \"no-op\"",
+    "typecheck": "echo \"no-op\"",
+    "test": "echo \"no-op\""
+  }
+}
