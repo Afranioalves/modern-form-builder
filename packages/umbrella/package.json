@@ -1,0 +1,32 @@
+{
+  "name": "modern-form",
+  "version": "0.1.0",
+  "description": "Convenience re-export of @modern-form/renderer and @modern-form/schema for consumers who want a single dependency.",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.mts", "default": "./dist/index.mjs" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "echo \"no-op (covered by @modern-form/renderer)\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@modern-form/renderer": "workspace:*",
+    "@modern-form/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "tsdown": "^0.23.0",
+    "typescript": "^5.6.0"
+  }
+}
