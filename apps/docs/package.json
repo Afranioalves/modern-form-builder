@@ -1,0 +1,17 @@
+{
+  "name": "@modern-form/docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "typecheck": "echo \"no-op (markdown content)\"",
+    "lint": "echo \"no-op (standalone npm install, not part of the eslint workspace)\"",
+    "test": "echo \"no-op (markdown content)\""
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
