@@ -1,0 +1,43 @@
+{
+  "name": "@modern-form/renderer",
+  "version": "0.1.0",
+  "description": "DOM rendering layer for modern-form: the public Form API, default Tailwind-based field components, and compiled dist/styles.css.",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.mts", "default": "./dist/index.mjs" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/index.css -o ./dist/styles.css --minify",
+    "build:js": "tsdown",
+    "build": "pnpm run build:css && pnpm run build:js",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@modern-form/core": "workspace:*",
+    "@modern-form/schema": "workspace:*",
+    "@modern-form/tokens": "workspace:*",
+    "dompurify": "^3.4.0",
+    "marked": "^18.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "jsdom": "^26.0.0",
+    "tailwindcss": "^4.3.3",
+    "tsdown": "^0.23.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.5"
+  }
+}

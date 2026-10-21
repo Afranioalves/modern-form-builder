@@ -1,0 +1,20 @@
+/**
+ * modern-form renderer stylesheet.
+ *
+ * Tailwind utilities are used for structure (flex/grid/spacing layout); every token-sensitive
+ * visual decision (color, radius, border, focus ring, typography) goes through a `--mf-*` CSS
+ * custom property via Tailwind v4's arbitrary-value `var()` shorthand (e.g. `border-(--mf-color-border)`),
+ * so overriding a single variable in consumer CSS reaches every component without touching
+ * Tailwind at all. See SPECIFICATION.md section 9.
+ */
+@import 'tailwindcss';
+@import '@modern-form/tokens/tokens.css';
+
+.mf-field {
+  font-family: var(--mf-font-family);
+  color: var(--mf-color-text);
+}
+
+.mf-field [data-part='error'] {
+  color: var(--mf-color-error);
+}
