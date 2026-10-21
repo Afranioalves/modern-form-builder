@@ -1,0 +1,33 @@
+{
+  "name": "@modern-form/core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic engine for modern-form: event bus, DI, FEEL expression evaluation, data binding, validation and the field-type registry.",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.mts", "default": "./dist/index.mjs" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@bpmn-io/feelin": "^7.0.0",
+    "@modern-form/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "tsdown": "^0.23.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.5"
+  }
+}
